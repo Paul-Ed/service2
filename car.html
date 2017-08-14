@@ -7,12 +7,29 @@
   <link href="css/select2.css" rel="stylesheet"/>
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/select2.js"></script>
-
-  <script>
+    <script>
     $(document).ready(function(){
       $(document).ready(function() { $("#yearModel").select2(); });
     })
+	</script>
+
+  <script>
+    $(document).ready(function(){
+      $(document).ready(function() { $("#brand").select2(); });
+    })
   </script>
+  <script>
+    $(document).ready(function(){
+      $(document).ready(function() { $("#fuel").select2(); });
+    })
+  </script>
+  <script>
+    $(document).ready(function(){
+      $(document).ready(function() { $("#usedNew").select2(); });
+    })
+  </script>
+
+
 
 </head>
 
@@ -26,7 +43,7 @@
     </tr>
   </tbody>
 </table>
-<table width="65%" border="1">
+<table width="71%" border="1">
   <tbody>
     <tr>
       <td width="17%">Registration Number</td>
@@ -69,7 +86,7 @@
     </tr>
     <tr>
       <td>Brand</td>
-      <td><select name="select2" id="select2">
+      <td><select name="select2" id="brand" style="width: 100px;">
         <option value="Nissan">Nissan</option>
         <option value="GWM">GWM</option>
         <option value="Toyota">Toyota</option>
@@ -91,10 +108,10 @@
       <td>&nbsp;</td>
     </tr>
     <tr>
-      <td>Fuel Type</td>
-      <td><select name="select3" id="select3">
-        <option value="Petrol">Petrol</option>
-        <option value="Diesel">Diesel</option>
+      <td>Fuel</td>
+      <td><select name="select2" id="fuel" style="width: 100px;">
+          <option value="Diesel">Diesel</option>
+          <option value="Petrol">Petrol</option>
       </select></td>
     </tr>
     <tr>
@@ -111,7 +128,7 @@
     </tr>
     <tr>
       <td>Used/New</td>
-      <td><select name="select4" id="select4">
+      <td><select name="select2" id="usedNew" style="width: 100px;">
         <option value="Used">Used</option>
         <option value="New">New</option>
       </select></td>

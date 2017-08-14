@@ -4,7 +4,10 @@
 <meta charset="utf-8">
 <title>Demo</title>
 
+  <link href="css/select2.css" rel="stylesheet"/>
+  <link href="StyleSheet.css" rel="stylesheet" type="text/css" media="screen">
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/select2.js"></script>
   <script>
 
     $(document).ready(function () {
@@ -26,6 +29,22 @@
 
 
 
+  </script>
+    <script>
+    $(document).ready(function(){
+      $(document).ready(function() { $("#partnumber").select2(); });
+    })
+  </script>
+      <script>
+    $(document).ready(function(){
+      $(document).ready(function() { $("#qty").select2(); });
+    })
+  </script>
+   </script>
+<script>
+    $(document).ready(function(){
+      $(document).ready(function() { $("#discription").select2(); });
+    })
   </script>
 
 </head>
@@ -52,15 +71,6 @@
   <tbody>
   <tr>
     <td width="84%">&nbsp;</td>
-    <td width="16%"><label for="search">Search:</label>
-      <input type="search" name="search" id="search"></td>
-  </tr>
-  </tbody>
-</table>
-<table width="100%" border="1">
-  <tbody>
-  <tr>
-    <td width="84%">&nbsp;</td>
     <td width="16%"><label for="datetime">Date:</label>
       <input type="datetime" name="datetime" id="datetime"></td>
   </tr>
@@ -69,24 +79,28 @@
 <table width="100%" border="1" id="invoiceTable">
   <tbody>
   <tr>
-    <td width="10%" style="text-align: center">Part Number</td>
-    <td width="47%" style="text-align: center">Discription</td>
-    <td width="8%" style="text-align: center">Qty</td>
-    <td width="13%" style="text-align: center">Unit Price</td>
-    <td width="11%" style="text-align: center">Labour Cost</td>
-    <td width="11%" style="text-align: center">Discount</td>
-  </tr>
+    <td width="17%" style="text-align: center">Part Number</td>
+    <td width="44%" style="text-align: center">Discription</td>
+    <td width="10%" style="text-align: center">Qty</td>
+    <td width="15%" style="text-align: center">Unit Price</td>
+    <td width="14%" style="text-align: center">Labour Cost</td>
+</tr>
   <tr>
     <td>
-      <select name="select2">
+      <select name="select2" id="partnumber" style="width: 200px;">
         <option value="1234567890">1234567890</option>
         <option value="1234567890">1234567890</option>
         <option value="1234567890">1234567890</option>
       </select>
     </td>
-    <td><input type="text" name="textfield"></td>
+    <td><select name="select2" id="discription" style="width: 530px;">
+      <option value="Replace Brakes">Replace Brakes</option>
+      <option value="Replace Brake Fluid">Replace Brake Fluid</option>
+      <option value="New Battery">New Battery</option>
+      <option value="Replace Pistons">Replace Pistons</option>
+    </select></td>
     <td><span style="text-align: center">
-        <select name="select">
+        <select name="select" id="qty" style="width: 100px;">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -101,8 +115,7 @@
       </span></td>
     <td><input type="text" name="textfield2"></td>
     <td><input type="text" name="textfield3"></td>
-    <td><input type="text" name="textfield4"></td>
-  </tr>
+</tr>
   <tr>
     <td>
       <input name="Add New Line" type="button" id="addNewLine" title="Add New Line" value="+">
@@ -112,15 +125,25 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
+</tr>
   </tbody>
 </table>
 <table width="100%" border="1">
   <tbody>
   <tr>
-    <td width="83%">&nbsp;</td>
-    <td width="17%"><label for="number">Total:</label>
+    <td>&nbsp;</td>
+    <td>VAT:
+      R
+      <input type="number" name="number3" id="number3"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Discount: R
+      <input type="number" name="number2" id="number2"></td>
+  </tr>
+  <tr>
+    <td width="85%">&nbsp;</td>
+    <td width="15%"><label for="number">Total:</label>
       R <input type="number" name="number" id="number">
     </td>
   </tr>

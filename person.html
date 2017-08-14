@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8">
 <title>Demo</title>
+  <link href="css/select2.css" rel="stylesheet"/>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/select2.js"></script>
+  
+    <script>
+    $(document).ready(function(){
+      $(document).ready(function() { $("#type").select2(); });
+    })
+  </script>
+
 </head>
 
 <body>
@@ -26,8 +36,16 @@
       <td><input type="text" name="textfield2" id="textfield2"></td>
     </tr>
     <tr>
-      <td>ID</td>
-      <td><input name="textfield3" type="text" id="textfield3" maxlength="13"></td>
+      <td>ID number</td>
+      <td><input type="text" name="textfield6" id="textfield6"></td>
+    </tr>
+    <tr>
+      <td>ID Type</td>
+      <td><select name="select" id="type" style="width: 100px;">
+        <option value="Passport">Passport</option>
+        <option value="ID">ID</option>
+        <option value="Drivers License">Drivers License</option>
+      </select></td>
     </tr>
     <tr>
       <td>Physical Address</td>
