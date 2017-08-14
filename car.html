@@ -5,30 +5,18 @@
 <title>Demo</title>
 
   <link href="css/select2.css" rel="stylesheet"/>
+  <link href="css/service2.css" rel="stylesheet" type="text/css">
+
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/select2.js"></script>
     <script>
     $(document).ready(function(){
-      $(document).ready(function() { $("#yearModel").select2(); });
+      $("#yearModel").select2();
+      $("#fuel").select2();
+      $("#brand").select2();
+      $("#usedNew").select2();
     })
 	</script>
-
-  <script>
-    $(document).ready(function(){
-      $(document).ready(function() { $("#brand").select2(); });
-    })
-  </script>
-  <script>
-    $(document).ready(function(){
-      $(document).ready(function() { $("#fuel").select2(); });
-    })
-  </script>
-  <script>
-    $(document).ready(function(){
-      $(document).ready(function() { $("#usedNew").select2(); });
-    })
-  </script>
-
 
 
 </head>
